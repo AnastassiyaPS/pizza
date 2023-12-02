@@ -1,0 +1,20 @@
+<div class="product">
+  <div class="product-image">
+    <!--          <img [src]="'assets/img/'+product.image" alt="Вариант пиццы 1">-->
+    <img src="{{product.image}}" alt="Вариант пиццы">
+  </div>
+  <!--  <div class="product-title">-->
+  <!--    {{product.title}}-->
+  <!--  </div>-->
+  <custom-title [title]="product.title">
+    <!--    <p>Берем пиццу!</p>-->
+  </custom-title>
+  <div class="product-text">
+    {{product.description}}
+  </div>
+  <div class="product-action" #elem>
+    <a class="btn btn-add-to-cart" routerLink="/order" [queryParams]="{product:product.title}">В корзину</a>
+    <a class="btn btn-white" [routerLink]="['/products', product.id]" >Описание пиццы</a>
+    <!--    <button class="btn btn-add-to-cart" (click)="addToCart(product, orderElement)">В корзину</button>-->
+  </div>
+</div>
