@@ -5,6 +5,7 @@ import {OrderComponent} from "./order.component";
 import {SharedModule} from "../../shared/shared.module";
 import {FormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
+import {InputTextModule} from "primeng/inputtext";
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {RouterModule} from "@angular/router";
     RouterModule,
     FormsModule,
     OrderRoutingModule,
+    InputTextModule
   ],
   exports:[
     OrderRoutingModule

@@ -12,9 +12,19 @@
       </div>
     </div>
     <div class="order-form">
-      <input type="text" class="order-input" id="product-input" coolInput placeholder="Ваша пицца" [(ngModel)]="formValues.productTitle">
-      <input type="text" class="order-input" id="address-input" placeholder="Адрес доставки" [(ngModel)]="formValues.address">
-      <input type="text" class="order-input" id="phone-input" placeholder="Телефон" [(ngModel)]="formValues.phone">
+
+      <span class="p-float-label">
+          <input pInputText id="float-label" type="text">
+          <label for="float-label">Username</label>
+      </span>
+
+      <input type="text" class="order-input" id="product-input" coolInput
+             pInputText
+             placeholder="Ваша пицца" [(ngModel)]="formValues.productTitle">
+      <input type="text" class="order-input" id="address-input" placeholder="Адрес доставки"
+             [(ngModel)]="formValues.address" pInputText>
+      <input type="text" class="order-input" id="phone-input" placeholder="Телефон" [(ngModel)]="formValues.phone"
+             pInputText>
       <button class="btn" (click)="createOrder()">Оформить заказ</button>
     </div>
     <div class="order-image">
