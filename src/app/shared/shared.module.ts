@@ -4,20 +4,23 @@ import {ProductCardComponent} from "./components/product-card/product-card.compo
 import {TitleComponent} from "./components/title/title.component";
 import {CoolInputDirective} from "./directives/cool-input.directive";
 import {RouterModule} from "@angular/router";
+import { PopupComponent } from './components/popup/popup.component';
 
 @NgModule({
   declarations: [
     ProductCardComponent,
     TitleComponent,
     CoolInputDirective,
+    PopupComponent
   ],
   exports: [
     ProductCardComponent,
-    TitleComponent
+    TitleComponent,
+    PopupComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
   ]
 })
 export class SharedModule {
