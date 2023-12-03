@@ -14,17 +14,25 @@
     <div class="order-form">
 
       <span class="p-float-label">
-          <input pInputText id="float-label" type="text">
-          <label for="float-label">Username</label>
-      </span>
-
       <input type="text" class="order-input" id="product-input" coolInput
              pInputText
-             placeholder="Ваша пицца" [(ngModel)]="formValues.productTitle">
-      <input type="text" class="order-input" id="address-input" placeholder="Адрес доставки"
+             [(ngModel)]="formValues.productTitle">
+        <label for="product-input">Пицца</label>
+      </span>
+
+      <span class="p-float-label">
+      <input type="text" class="order-input" id="address-input"
              [(ngModel)]="formValues.address" pInputText>
-      <input type="text" class="order-input" id="phone-input" placeholder="Телефон" [(ngModel)]="formValues.phone"
+        <label for="address-input">Адрес доставки</label>
+      </span>
+
+      <span class="p-float-label">
+      <input type="text" class="order-input" id="phone-input"
+             [(ngModel)]="formValues.phone"
              pInputText>
+        <label for="phone-input">Телефон</label>
+      </span>
+
       <button class="btn" (click)="createOrder()">Оформить заказ</button>
     </div>
     <div class="order-image">
