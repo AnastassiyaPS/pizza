@@ -12,10 +12,8 @@
       </div>
     </div>
     <div class="order-form">
-
       <span class="p-float-label">
-      <input type="text" class="order-input" id="product-input" coolInput
-             pInputText
+      <input type="text" class="order-input" id="product-input" pInputText
              [(ngModel)]="formValues.productTitle">
         <label for="product-input">Пицца</label>
       </span>
@@ -33,7 +31,7 @@
         <label for="phone-input">Телефон</label>
       </span>
 
-      <button class="btn" (click)="createOrder()">Оформить заказ</button>
+      <button class="btn" (click)="createOrder()" tuiButton>Оформить заказ</button>
     </div>
     <div class="order-image">
       <img src="../../../assets/img/pizza_slice.png" alt="Кусочек пиццы">

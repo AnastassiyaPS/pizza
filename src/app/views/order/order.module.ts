@@ -6,6 +6,7 @@ import {SharedModule} from "../../shared/shared.module";
 import {FormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 import {InputTextModule} from "primeng/inputtext";
+import {TuiButtonModule} from "@taiga-ui/core";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {InputTextModule} from "primeng/inputtext";
     RouterModule,
     FormsModule,
     OrderRoutingModule,
-    InputTextModule
+    InputTextModule,
+    TuiButtonModule
   ],
   exports:[
     OrderRoutingModule

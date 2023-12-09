@@ -3,6 +3,7 @@ import {map, Subject, Subscription} from "rxjs";
 import {CartService} from "../../../shared/services/cart.service";
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {PopupComponent} from "../../../shared/components/popup/popup.component";
+import {environment} from "../../../../environments/environment";
 
 // declare var bootstrap: any;
 
@@ -39,6 +40,9 @@ export class MainComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngOnInit() {
+
+    console.log(environment.production);
+
     this.subscription = this.subject.subscribe(
       {
         next: (param: number) => {
