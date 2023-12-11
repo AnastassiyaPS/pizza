@@ -37,6 +37,19 @@ export class MainComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngAfterViewInit() {
     // this.popupComponent.open();
+    console.log()
+
+    const imagePath = '../../../../assets/img/kitchen.png';
+    fetch(imagePath)
+      .then(response => {
+        if (!response.ok) {
+          console.log(`Файл ${imagePath} не найден.`);
+        } else {
+          console.log(`Файл ${imagePath} найден.`);
+        }
+      })
+      .catch(error => console.error(`Произошла ошибка: ${error.message}`));
+
   }
 
   ngOnInit() {
