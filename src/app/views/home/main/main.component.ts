@@ -39,7 +39,7 @@ export class MainComponent implements OnInit, OnDestroy, AfterViewInit {
     // this.popupComponent.open();
     console.log()
 
-    const imagePath = '../../../../assets/img/kitchen.png';
+    const imagePath = 'basket.png';
     fetch(imagePath)
       .then(response => {
         if (!response.ok) {
